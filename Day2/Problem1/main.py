@@ -8,14 +8,14 @@ for line in lines:
     for i, n in enumerate(nums):
         if i == 0:
             continue
-        if increasing and n < nums[i - 1]:
+        if increasing and n <= nums[i - 1]:
             safe = False
             break
-        if not increasing and n > nums[i - 1]:
+        if not increasing and n >= nums[i - 1]:
             safe = False
             break
         diff = abs(n - nums[i - 1])
-        if (diff == 0) or (diff > 3):
+        if diff > 3:
             safe = False
             break
     numSafe = numSafe + 1 if safe else numSafe
