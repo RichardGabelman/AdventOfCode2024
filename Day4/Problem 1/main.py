@@ -4,12 +4,6 @@ def xmas_count(file):
   lines = f.readlines()
 
   xmas_count = 0
-  down_count = 0
-  up_count = 0
-  dr_count = 0
-  dl_count = 0
-  ul_count = 0
-  ur_count = 0
 
   for i in range(len(lines)):
     #left and right case
